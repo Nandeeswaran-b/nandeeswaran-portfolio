@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-start: #f8fafc; /* Slate 50 */
+  --background-end: #e2e8f0;   /* Slate 200 */
+  --foreground: #0f172a;       /* Slate 900 */
+  
+  --scrollbar-track: #e2e8f0;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #3b82f6;
+
+  --card-bg: rgba(255, 255, 255, 0.4);
+  --card-border: rgba(0, 0, 0, 0.06);
+  --card-glow: rgba(59, 130, 246, 0.1);
+}
+
+.dark {
+  --background-start: #030712; /* Charcoal black */
+  --background-end: #0a0f1e;   /* Deep Navy */
+  --foreground: #f8fafc;
+  
+  --scrollbar-track: #020617;
+  --scrollbar-thumb: #1e293b;
+  --scrollbar-thumb-hover: #3b82f6;
+
+  --card-bg: rgba(10, 15, 30, 0.5);
+  --card-border: rgba(255, 255, 255, 0.03);
+  --card-glow: rgba(0, 82, 255, 0.25);
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(
+      to bottom,
+      var(--background-start),
+      var(--background-end)
+    ) no-repeat;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Glassmorphism panel (legacy references) */
+.glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+}
+
+/* Glow Text */
+.glow-text {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+/* Premium Floating Background Blobs */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.08);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.92);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 8s infinite alternate;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Premium Card hover effects */
+.premium-card {
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(59, 130, 246, 0.3),
+    transparent 40%,
+    transparent 60%,
+    rgba(99, 102, 241, 0.3)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px var(--card-glow);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.premium-card:hover::before {
+  opacity: 1;
+}
