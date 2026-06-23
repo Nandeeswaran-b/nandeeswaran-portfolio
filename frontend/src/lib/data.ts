@@ -157,8 +157,8 @@ export const certifications = [
     driveLink: 'https://drive.google.com/drive/folders/19A1jh7qAsFvF9IvFi3r6e0h6u_lEI944'
   },
   {
-    name: 'C Programming',
-    issuer: 'Infosys Springboard',
+    name: 'Artificial Intelligence Fundamentals',
+    issuer: 'IBM',
     driveLink: 'https://drive.google.com/drive/folders/1mW_QULUkYLTqLKdJHQk_4HtmD7967YCB'
   },
   {
@@ -179,7 +179,7 @@ export const achievements = [
   },
   {
     title: 'Completed Industry Certifications',
-    description: 'Earned credentials from Oracle (AI Foundations), Power BI, Excel, and Infosys Springboard.'
+    description: 'Earned credentials from Oracle (AI Foundations), IBM (AI Fundamentals), Power BI, Excel, and Infosys Springboard.'
   },
   {
     title: 'Participated in Technical Paper Presentations',
