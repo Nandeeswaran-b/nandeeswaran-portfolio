@@ -149,7 +149,7 @@ export const certifications = [
   {
     name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
     issuer: 'Oracle',
-    driveLink: 'https://drive.google.com/drive/folders/1A9CDodY46BaVaB0P1pl7GlaQNyp_Hbc'
+    driveLink: 'https://drive.google.com/drive/folders/1A9CDodY46BaVaB0P1pl7GlaQNyp_Hbc-'
   },
   {
     name: 'Power BI for Beginners',
