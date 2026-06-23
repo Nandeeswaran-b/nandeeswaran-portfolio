@@ -68,7 +68,7 @@ export default function RadarChart() {
     // Offset labels slightly outwards beyond the max radius
     const { x, y } = getCoordinates(index, 1.22);
     // Alignments adjustments
-    let textAnchor = 'middle';
+    let textAnchor: 'start' | 'middle' | 'end' = 'middle';
     if (x < cx - 10) textAnchor = 'end';
     else if (x > cx + 10) textAnchor = 'start';
     
