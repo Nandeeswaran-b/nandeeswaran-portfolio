@@ -8,9 +8,9 @@ export const personalInfo = {
   careerObjective: 'Passionate about Data Science, Machine Learning, Artificial Intelligence, Predictive Analytics, and solving real-world problems using data-driven solutions.',
   email: 'nandeeswaran033@gmail.com',
   phone: '+91 88079 82288', // Placeholder/Typical phone format, customizable
-  linkedin: 'https://linkedin.com',
-  github: 'https://github.com',
-  leetcode: 'https://leetcode.com',
+  linkedin: 'https://linkedin.com/in/bnandeeswaran',
+  github: 'https://github.com/Nandeeswaran-b',
+  leetcode: 'https://leetcode.com/u/Nandeeswarn_45/',
   resumeFolder: 'https://drive.google.com/drive/folders/1sOftMSg_xfGdfZXYXgO9qcVkQnqCZqP8'
 };
 
