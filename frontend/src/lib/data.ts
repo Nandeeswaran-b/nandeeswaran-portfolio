@@ -191,9 +191,17 @@ export const education = [
   {
     institution: 'SNS College of Engineering',
     degree: 'B.Tech Artificial Intelligence and Data Science',
-    period: '2022 - 2026',
+    period: '2024 - 2028',
     description: 'Specializing in machine learning methodologies, predictive model architectures, and data structures. Relevant coursework: Deep Learning, Data Structures and Algorithms, Advanced Database Management Systems, and Statistical Inference.',
     skills: ['Machine Learning', 'Data Structures', 'Statistical Modeling'],
-    technologies: ['Python', 'SQL', 'R', 'Power BI']
+    technologies: ['Python', 'SQL', 'Power BI']
+  },
+  {
+    institution: 'Akshaya Academy',
+    degree: 'Higher Secondary Education',
+    period: '2022 - 2024',
+    description: 'Completed Higher Secondary education focusing on Mathematics, Physics, Chemistry, and Computer Science.',
+    skills: ['Mathematics', 'Physics', 'Computer Science'],
+    technologies: []
   }
 ];

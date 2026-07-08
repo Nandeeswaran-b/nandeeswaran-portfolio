@@ -28,11 +28,19 @@ type TimelineFilter = 'all' | 'work' | 'education';
 export default function Internship() {
   const [activeTab, setActiveTab] = useState<TimelineFilter>('all');
 
-  // Map and sort items. Tamil Infotech (2026) first, DeepByte (2025) second, SNS (2022-2026) third.
+  // Map and sort items. Parsed dynamically from period for accurate timeline sorting.
   const unifiedItems = [
-    ...internships.map(i => ({ ...i, type: 'work', title: i.role, subtitle: i.company, year: 2026 })),
-    ...education.map(e => ({ ...e, type: 'education', title: e.degree, subtitle: e.institution, year: 2022 }))
-  ].sort((a, b) => b.year - a.year); // Sort roughly descending
+    ...internships.map(i => {
+      const match = i.period.match(/\d{4}/);
+      const year = match ? parseInt(match[0], 10) : 2026;
+      return { ...i, type: 'work', title: i.role, subtitle: i.company, year };
+    }),
+    ...education.map(e => {
+      const match = e.period.match(/\d{4}/);
+      const year = match ? parseInt(match[0], 10) : 2022;
+      return { ...e, type: 'education', title: e.degree, subtitle: e.institution, year };
+    })
+  ].sort((a, b) => b.year - a.year); // Sort descending
 
   const filteredItems = unifiedItems.filter(item => {
     if (activeTab === 'all') return true;
