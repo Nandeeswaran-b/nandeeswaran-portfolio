@@ -111,7 +111,7 @@ export const projects = [
     description: 'An analytical pipeline that evaluates and automates credit approvals. Compares random forests and boosted trees to minimize false approvals and credit losses.',
     category: 'Machine Learning',
     coverImage: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop',
-    liveLink: 'https://loan-approval-prediction.onrender.com',
+    liveLink: 'https://h2w3498ybggecoxakdcwcf.streamlit.app/',
     githubLink: 'https://github.com/Nandeeswaran-b/-loan-approval-prediction',
     tags: ['Python', 'XGBoost', 'Feature Engineering', 'EDA'],
     challenge: 'Automating credit risk evaluation while maintaining tight safety guardrails. Loan officers needed an interpretable yet highly accurate metric to approve applications instantly without human bottlenecking.',
